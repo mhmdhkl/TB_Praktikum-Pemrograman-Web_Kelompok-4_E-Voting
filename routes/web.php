@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\VoterController;
+use App\Http\Controllers\VotersController;
 use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\DashboardController;
 
@@ -30,4 +32,12 @@ Route::middleware(['auth', 'check.user.role'])->group(function () {
 
     Route::resource('candidate', CandidateController::class);
     Route::resource('admin', AdminController::class);
+    Route::resource('voters', VotersController::class)->except(['create', 'show']);
+    
+    Route::prefix('voter')->name('voter.')->controller(VoterController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/', 'store')->name('store');
+        Route::get('/result', 'result')->name('result');
+        Route::get('/{id}', 'show')->name('show');
+    });
 });
