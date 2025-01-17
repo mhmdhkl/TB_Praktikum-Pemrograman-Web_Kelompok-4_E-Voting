@@ -102,7 +102,7 @@
 
             function fetchData() {
                 $.ajax({
-                    url: '{{ route('voters.index') }}',
+                    url: '/voters',
                     type: 'GET',
                     dataType: 'json',
                     success: function(data) {
