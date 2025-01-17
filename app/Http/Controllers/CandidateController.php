@@ -9,15 +9,13 @@ use Illuminate\Support\Facades\Storage;
 
 class CandidateController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         $candidates = Candidate::get();
 
         return view("candidate.index", [
-            'title' => 'E-Voting | Candidate List',
+            'title' => 'E-Voting | List Kandidat',
             'candidates' => $candidates
         ]);
     }
@@ -58,9 +56,7 @@ class CandidateController extends Controller
         return redirect()->route('candidate.index')->with('message', 'Data Berhasil Ditambahkan!');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show($id)
     {
         $candidates = Candidate::findOrFail($id);
@@ -78,18 +74,14 @@ class CandidateController extends Controller
         return response()->file($pdfPath, $headers);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit($id)
     {
-        $candidate = Candidate::findOrFail($id); // Mengambil data kandidat berdasarkan ID
+        $candidate = Candidate::findOrFail($id);
         return view('candidate.components.modal', compact('candidate'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
     public function update(Request $request, $id)
     {
         
@@ -136,9 +128,7 @@ class CandidateController extends Controller
         return redirect()->route('candidate.index')->with('message', 'Data Berhasil Diperbarui!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(string $id)
     {
         $candidates = Candidate::findOrFail($id);

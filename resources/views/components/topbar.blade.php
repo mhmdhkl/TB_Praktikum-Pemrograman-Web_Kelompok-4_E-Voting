@@ -16,7 +16,7 @@
                 <div style="display: grid; grid-template-columns: 1fr auto; max-width: 300px;">
                     <span class="mr-3 mt-2 d-lg-inline text-gray-600 small"
                         style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                        Hello, {{ \Str::limit(auth()->user()->name, 10) }}
+                        Hallo, {{ \Str::limit(auth()->user()->name, 10) }}
                         ({{ ['admin' => 'Admin', 'voter' => 'Voter'][auth()->user()->role] ?? 'Voter' }})
                     </span>
                     <img class="img-profile rounded-circle" alt="profile icon"

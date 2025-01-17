@@ -20,7 +20,7 @@ class VotersController extends Controller
         });
 
         return view('voters.index', [
-            'title' => 'E-Voting-HMPS | Voters List',
+            'title' => 'E-Voting | List Pemberi Suara',
             'voters' => $voters
         ]);
     }
