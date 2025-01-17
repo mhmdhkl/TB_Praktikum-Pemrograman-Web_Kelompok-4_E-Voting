@@ -11,6 +11,8 @@
                             <th>Nama</th>
                             <th>Foto Paslon</th>
                             <th>Visi Misi</th>
+                            <th>Visi</th>
+                            <th>Misi</th>
                             <th>Nomor Paslon</th>
                             <th>Actions</th>
                         </tr>
@@ -27,13 +29,18 @@
                                     <a href="{{ route('candidate.show', $candidate->id) }}" target="_blank"
                                         class="btn btn-primary btn-sm">Resume </a>
                                 </td>
+                                <td>{{ $candidate->visi }}</td>
+                                <td>{{ $candidate->misi }}</td>
                                 <td>{{ $candidate->election_number }}</td>
                                 <td>
                                     <button class="btn btn-warning btn-sm btn-block mb-2" data-toggle="modal"
                                         data-target="#editCandidateModal" data-id="{{ $candidate->id }}"
                                         data-name="{{ $candidate->name }}"
                                         data-election_number="{{ $candidate->election_number }}"
-                                        data-picture="{{ $candidate->picture }}" data-resume="{{ $candidate->resume }}"
+                                        data-picture="{{ $candidate->picture }}"
+                                        data-resume="{{ $candidate->resume }}"
+                                        data-visi="{{ $candidate->visi }}"
+                                        data-misi="{{ $candidate->misi }}"
                                         aria-label="Edit Candidate {{ $candidate->name }}">
                                         <i class="fas fa-edit"></i>
                                     </button>

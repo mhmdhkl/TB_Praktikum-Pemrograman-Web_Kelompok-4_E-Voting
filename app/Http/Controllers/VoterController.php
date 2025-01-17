@@ -28,7 +28,6 @@ class VoterController extends Controller
     public function store(Request $request)
     {
         $candidateId = $request->input('candidate_id');
-
         $user = auth()->user();
 
         if ($user instanceof User && $candidateId !== null) {
@@ -62,6 +61,7 @@ class VoterController extends Controller
             ]);
         }
     }
+
     public function show($id)
     {
         $candidate = Candidate::findOrFail($id);

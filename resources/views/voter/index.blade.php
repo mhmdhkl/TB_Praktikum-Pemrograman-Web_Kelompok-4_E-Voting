@@ -41,6 +41,7 @@
                                             </h6>
                                         </div>
                                         <div class="card-body text-center">
+                                            <!-- Picture Section -->
                                             <div
                                                 style="max-height: 250px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
                                                 <img class="img-fluid"
@@ -50,6 +51,16 @@
                                                     onmouseover="this.style.transform='scale(1.1)'"
                                                     onmouseout="this.style.transform='scale(1)'">
                                             </div>
+                                            
+                                            <!-- Visi dan Misi Section -->
+                                            <div class="mt-3">
+                                                <h5 class="text-primary">Visi</h5>
+                                                <p>{{ $candidate->visi }}</p>
+                                                <h5 class="text-primary">Misi</h5>
+                                                <p>{{ $candidate->misi }}</p>
+                                            </div>
+
+                                            <!-- Resume and Vote Buttons -->
                                             <div class="row mt-3">
                                                 <div class="col">
                                                     <a href="{{ route('voter.show', $candidate->id) }}" target="_blank"

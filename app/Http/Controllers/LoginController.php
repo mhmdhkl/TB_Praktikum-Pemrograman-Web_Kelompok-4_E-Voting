@@ -37,6 +37,8 @@ class LoginController extends Controller
 
             if ($user->role === 'admin') {
                 return redirect()->route('dashboard.index');
+            } elseif ($user->role === 'voter') {
+                return redirect()->route('voter.index');
             } else {
                 Auth::logout();
                 return back()->withErrors(['Peran pengguna tidak valid.'])->withInput(['email' => $user->email]);

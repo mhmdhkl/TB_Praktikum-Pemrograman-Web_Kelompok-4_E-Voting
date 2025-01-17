@@ -3,13 +3,42 @@
 
 <x-header>{{ $title }}</x-header>
 
+<head>
+    <style>
+        /* Ubah warna sidebar ke merah */
+        .sidebar {
+            background-color: #b30000; /* Warna merah */
+        }
+
+        .sidebar .nav-link {
+            color: #ffffff; /* Warna teks putih untuk kontras */
+        }
+
+        .sidebar .nav-link:hover {
+            background-color: #ff4d4d; /* Warna hover merah terang */
+        }
+
+        .sidebar .sidebar-heading {
+            color: #ffcccc; /* Warna merah muda untuk heading */
+        }
+
+        #sidebarToggle {
+            background-color: #ff6666; /* Tombol toggle dengan warna merah muda */
+        }
+
+        #sidebarToggle:hover {
+            background-color: #cc0000; /* Tombol toggle hover merah gelap */
+        }
+    </style>
+</head>
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
             <div class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard"
                 aria-label="E-Voting Dashboard">
@@ -26,8 +55,8 @@
             <ul class="nav flex-column">
                 <li class="nav-item {{ request()->is('dashboard') ? 'active' : '' }}">
                     <a class="nav-link" href="/dashboard">
-                        <i class="fas fa-fw fa-chart-area fa-lg text-white"></i>
-                        <span class="sidebar-text text-white">Dashboard</span>
+                        <i class="fas fa-fw fa-chart-area fa-lg"></i>
+                        <span class="sidebar-text">Dashboard</span>
                     </a>
                 </li>
             </ul>
@@ -36,23 +65,23 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading text-white">
+            <div class="sidebar-heading">
                 User Data
             </div>
 
             <!-- Nav Item - Candidates -->
             <li class="nav-item {{ request()->is('candidate') ? 'active' : '' }}">
                 <a class="nav-link" href="/candidate">
-                    <i class="fas fa-users fa-lg text-white"></i>
-                    <span class="sidebar-text text-white">Kandidat</span>
+                    <i class="fas fa-users fa-lg"></i>
+                    <span class="sidebar-text">Kandidat</span>
                 </a>
             </li>
 
             <!-- Nav Item - Voter -->
             <li class="nav-item {{ request()->is('voters') ? 'active' : '' }}">
                 <a class="nav-link" href="/voters">
-                    <i class="fas fa-person-booth fa-lg text-white"></i>
-                    <span class="sidebar-text text-white">Pemberi Suara</span>
+                    <i class="fas fa-person-booth fa-lg"></i>
+                    <span class="sidebar-text">Pemberi Suara</span>
                 </a>
             </li>
 
@@ -60,15 +89,15 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading text-white">
+            <div class="sidebar-heading">
                 Manage
             </div>
 
             <!-- Nav Item - Admin -->
             <li class="nav-item {{ request()->is('admin') ? 'active' : '' }}">
                 <a class="nav-link" href="/admin">
-                    <i class="fas fa-user-lock fa-lg text-white"></i>
-                    <span class="sidebar-text text-white">Admin</span>
+                    <i class="fas fa-user-lock fa-lg"></i>
+                    <span class="sidebar-text">Admin</span>
                 </a>
             </li>
 
@@ -77,7 +106,7 @@
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0 text-white" id="sidebarToggle"></button>
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
         </ul>

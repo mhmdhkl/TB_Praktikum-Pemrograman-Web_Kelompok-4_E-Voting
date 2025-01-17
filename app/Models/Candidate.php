@@ -14,7 +14,7 @@ class Candidate extends Model
 
     protected $table = 'candidates';
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'picture', 'resume', 'election_number', 'total_voter'];
+    protected $fillable = ['name', 'picture', 'resume', 'visi', 'misi', 'election_number', 'total_voter'];
 
     public function voters()
     {

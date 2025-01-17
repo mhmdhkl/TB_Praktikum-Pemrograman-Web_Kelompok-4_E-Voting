@@ -28,6 +28,15 @@
                                 accept="application/pdf" required>
                         </div>
                         <div class="form-group">
+                            <label for="visi">Visi</label>
+                            <textarea class="form-control" id="visi" name="visi" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="misi">Misi</label>
+                            <textarea class="form-control" id="misi" name="misi" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
                             <label for="election_number">Nomor Paslon</label>
                             <input type="number" class="form-control" id="election_number" name="election_number"
                                 required>
@@ -78,6 +87,14 @@
                             <span id="editResumePreview"></span>
                         </div>
                         <div class="form-group">
+                            <label for="editVisi">Visi</label>
+                            <textarea class="form-control" id="editVisi" name="visi" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="editMisi">Misi</label>
+                            <textarea class="form-control" id="editMisi" name="misi" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
                             <label for="editElectionNumber">Nomor Paslon</label>
                             <input type="number" class="form-control" id="editElectionNumber"
                                 name="election_number" required>
@@ -100,6 +117,8 @@
             var electionNumber = button.data('election_number');
             var picture = button.data('picture');
             var resume = button.data('resume');
+            var visi = button.data('visi');
+            var misi = button.data('misi');
 
             $('#editName').val(name);
             $('#editElectionNumber').val(electionNumber);
@@ -112,6 +131,9 @@
                 $('#editPicturePreview').attr('src', 'default-image.png'); // Gambar default
                 }
             $('#editResumePreview').text(resume);
+            $('#editVisi').val(visi);
+            $('#editMisi').val(misi);
+
 
             $('#editCandidateForm').attr('action', '/candidate/' + id).attr('enctype', 'multipart/form-data');
         });

@@ -29,6 +29,8 @@ class CandidateController extends Controller
             'name' => 'required|unique:candidates,name',
             'picture' => 'image|mimes:jpeg,png,jpg|max:2048',
             'resume' => 'mimes:pdf|max:5120',
+            'visi' => 'required|string',
+            'misi' => 'required|string',
             'election_number' => 'required|unique:candidates,election_number',
         ]);
 
@@ -48,6 +50,8 @@ class CandidateController extends Controller
         }
         $validatedData['picture'] = $pictureName;
         $validatedData['resume'] = $resumeName;
+        $validatedData['visi'] = $request->visi;
+        $validatedData['misi'] = $request->misi;
 
         Candidate::create($validatedData);
 
@@ -95,6 +99,8 @@ class CandidateController extends Controller
             'name' => 'required|unique:candidates,name,' . $candidates->id,
             'picture' => $request->hasFile('picture') ? 'required|image|mimes:jpeg,png,jpg' : 'nullable',
             'resume' => $request->hasFile('resume') ? 'required|mimes:pdf' : 'nullable',
+            'visi' => 'required|string',
+            'misi' => 'required|string',
             'election_number' => 'required|unique:candidates,election_number,' . $candidates->id,
         ]);
 
@@ -123,7 +129,8 @@ class CandidateController extends Controller
 
         $validatedData['picture'] = $newPictureName;
         $validatedData['resume'] = $newResumeName;
-
+        $validatedData['visi'] = $request->visi;
+        $validatedData['misi'] = $request->misi;
         $candidates->update($validatedData);
 
         return redirect()->route('candidate.index')->with('message', 'Data Berhasil Diperbarui!');
