@@ -48,7 +48,13 @@
                 </a>
             </li>
 
-
+            <!-- Nav Item - Voter -->
+            <li class="nav-item {{ request()->is('voters') ? 'active' : '' }}">
+                <a class="nav-link" href="/voters">
+                    <i class="fas fa-person-booth fa-lg text-white"></i>
+                    <span class="sidebar-text text-white">Pemberi Suara</span>
+                </a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
