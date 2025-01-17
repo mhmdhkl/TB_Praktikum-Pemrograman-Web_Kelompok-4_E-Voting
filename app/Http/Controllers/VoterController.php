@@ -20,7 +20,7 @@ class VoterController extends Controller
         $candidates = Candidate::orderBy('election_number')->get();
 
         return view("voter.index", [
-            'title' => 'E-Voting | Election Page',
+            'title' => 'E-Voting | Pemilihan Suara',
             'candidates' => $candidates
         ]);
     }
@@ -52,12 +52,12 @@ class VoterController extends Controller
             $candidateVoteData = Candidate::pluck('total_voter', 'election_number')->toArray();
 
             return view('voter.result', [
-                'title' => 'E-Voting | Election Results Page',
+                'title' => 'E-Voting | Hasil Pemilihan Suara',
                 'candidateVoteData' => $candidateVoteData
             ]);
         } else {
             return view('voter.index', [
-                'title' => 'E-Voting | Election Page'
+                'title' => 'E-Voting | Pemilihan Suara'
             ]);
         }
     }

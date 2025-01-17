@@ -5,29 +5,32 @@
 
 <head>
     <style>
-        /* Ubah warna sidebar ke merah */
         .sidebar {
-            background-color: #b30000; /* Warna merah */
+            background-color: #b30000; 
         }
 
         .sidebar .nav-link {
-            color: #ffffff; /* Warna teks putih untuk kontras */
+            color: #ffffff; 
         }
 
         .sidebar .nav-link:hover {
-            background-color: #ff4d4d; /* Warna hover merah terang */
+            background-color: #ff4d4d; 
         }
 
         .sidebar .sidebar-heading {
-            color: #ffcccc; /* Warna merah muda untuk heading */
+            color: #ffcccc; 
         }
 
         #sidebarToggle {
-            background-color: #ff6666; /* Tombol toggle dengan warna merah muda */
+            background-color: #ff6666; 
         }
 
         #sidebarToggle:hover {
-            background-color: #cc0000; /* Tombol toggle hover merah gelap */
+            background-color: #cc0000; 
+        }
+        .sidebar-brand-icon img {
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
         }
     </style>
 </head>
@@ -43,7 +46,7 @@
             <div class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard"
                 aria-label="E-Voting Dashboard">
                 <div class="sidebar-brand-icon">
-                    <i class="fas fa-vote-yea fa-2x text-white"></i>
+                <img src="{{ asset('storage/logo/logo.png') }}" alt="E-Voting Logo" style="width: 50px; height: auto;">
                 </div>
                 <div class="sidebar-brand-text mx-3 text-white">E-Voting</div>
             </div>

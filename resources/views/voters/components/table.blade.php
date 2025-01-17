@@ -1,14 +1,14 @@
     <!-- DataTables Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Voters Table</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Tabel Pemberi Suara</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Nama</th>
                             <th>Email</th>
                             <th>Status</th>
                             <th>Actions</th>
@@ -22,10 +22,10 @@
                                 <td id="status-{{ $voter->id }}">
                                     @if ($voter->status === 'Voted')
                                         <span class="badge badge-success"><i class="fas fa-check-circle"></i>
-                                            Voted</span>
+                                            Sudah Melakukan Suara</span>
                                     @else
-                                        <span class="badge badge-danger"><i class="fas fa-times-circle"></i> Not
-                                            Voted</span>
+                                        <span class="badge badge-danger"><i class="fas fa-times-circle"></i>
+                                        Belum Melakukan Suara</span>
                                     @endif
                                 </td>
                                 <td>

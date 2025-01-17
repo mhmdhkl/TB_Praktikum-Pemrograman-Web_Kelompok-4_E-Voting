@@ -24,7 +24,7 @@
                             <div class="col-md-6">
                                 <div class="card shadow">
                                     <div class="card-body text-center">
-                                        <p class="lead">No candidates available at the moment.</p>
+                                        <p class="lead">Tidak ada kandidat yang tersedia saat ini.</p>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                                         <div class="card-body text-center">
                                             <!-- Picture Section -->
                                             <div
-                                                style="max-height: 250px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                                                style="max-height: 500px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
                                                 <img class="img-fluid"
                                                     style="max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.3s ease-in-out;"
                                                     src="{{ asset('storage/candidate-pictures/' . $candidate->picture) }}"
@@ -57,14 +57,20 @@
                                                 <h5 class="text-primary">Visi</h5>
                                                 <p>{{ $candidate->visi }}</p>
                                                 <h5 class="text-primary">Misi</h5>
-                                                <p>{{ $candidate->misi }}</p>
+                                            <ul class="text-justify">
+                                                    @foreach (explode("\n", $candidate->misi) as $misi)
+                                                        <li>{{ $misi }}</li>
+                                                    @endforeach
+                                                </ul>
+                                                <p class="text-justify">
+                                                
                                             </div>
 
                                             <!-- Resume and Vote Buttons -->
                                             <div class="row mt-3">
                                                 <div class="col">
                                                     <a href="{{ route('voter.show', $candidate->id) }}" target="_blank"
-                                                        class="btn btn-danger btn-user btn-block">Resume</a>
+                                                        class="btn btn-danger btn-user btn-block">Visi-Misi</a>
                                                 </div>
                                                 <div class="col">
                                                     <!-- Form Section -->
@@ -73,7 +79,7 @@
                                                         <input type="hidden" name="candidate_id"
                                                             value="{{ $candidate->id }}">
                                                         <button type="submit"
-                                                            class="btn btn-warning btn-user btn-block">Vote</button>
+                                                            class="btn btn-warning btn-user btn-block">Pilih Calon Kandidat</button>
                                                     </form>
                                                     <!-- End Form Section -->
                                                 </div>

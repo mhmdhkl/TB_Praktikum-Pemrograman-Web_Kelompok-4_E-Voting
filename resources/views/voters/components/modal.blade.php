@@ -14,7 +14,7 @@
                     <div class="modal-body">
                         <!-- Form fields -->
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>Nama</label>
                             <input type="text" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">

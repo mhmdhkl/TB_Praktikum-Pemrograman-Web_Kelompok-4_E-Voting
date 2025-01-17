@@ -22,8 +22,7 @@
                     <!-- Descriptive Text -->
                     <div class="row justify-content-center align-items-center mb-5">
                         <div class="col-md-6 text-center">
-                            <p class="lead mb-0" style="font-family: 'Open Sans', sans-serif; color: #7f8c8d;">Here is
-                                the vote count chart for the candidates.</p>
+                            <p class="lead mb-0" style="font-family: 'Open Sans', sans-serif; color: #7f8c8d;">Berikut adalah grafik penghitungan Quick Count suara untuk para kandidat.</p>
                         </div>
                     </div>
 
@@ -31,8 +30,8 @@
                     <div class="col-xl-10 col-lg-12 mx-auto">
                         <div class="card shadow mb-4">
                             <div class="card-header py-3 d-flex justify-content-between align-items-center"
-                                style="background-color: #2c3e50; color: #fff;">
-                                <h6 class="m-0 font-weight-bold">Vote Count Chart</h6>
+                                style="background-color: #cc0000; color: #fff;">
+                                <h6 class="m-0 font-weight-bold">Grafik Penghitungan Suara</h6>
                             </div>
                             <div class="card-body">
                                 <div class="chart-bar" style="max-height: 300px;">
