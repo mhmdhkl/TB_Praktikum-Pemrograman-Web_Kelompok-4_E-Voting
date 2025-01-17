@@ -22,7 +22,7 @@
                                 id="exampleInputPassword" placeholder="Password..."required>
                         </div>
                         <!-- Login button -->
-                        <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
+                        <button type="submit" class="btn btn-danger btn-user btn-block">Submit</button>
                     </form>
                 </div>
             </div>
