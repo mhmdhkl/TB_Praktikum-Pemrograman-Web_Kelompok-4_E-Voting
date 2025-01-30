@@ -1,4 +1,4 @@
-# TB Kelompok 4 Informatika B
+# Tugas Besar Kelompok 4 Informatika B
 
 Program E-Voting
 
